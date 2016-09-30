@@ -3,7 +3,7 @@ LIMIT = 85 * 1024 * 1024
 
 large_files = []
 Find.find('.') {|path|
-  if %w{Read_me.txt Thumbs.db}.include?(File.basename(path))
+  if %w{Read_me.txt Readme.txt Thumbs.db}.include?(File.basename(path))
     print "rm #{path}\n"
   end
   r = File.basename(path).split('.')
