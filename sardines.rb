@@ -22,7 +22,7 @@ Find.find('.') {|path|
 if(large_files.size > 0)
   File.open('.gitignore', 'w') {|w|
     large_files.each {|path|
-      w.print path, "\n"
+      w.print File.basename(path), "\n"
     }
   }
   $stderr.print ".gitignore written.\n"
