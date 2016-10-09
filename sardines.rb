@@ -9,7 +9,7 @@ Find.find('.') {|path|
   r = File.basename(path).split('.')
   if(r.size > 1)
     s = r[1..-1].join('.')
-    if %w{shp.xml aux.xml aux gz sbx sbn}.include?(s)
+    if %w{shp.xml aux.xml tif.xml aux gz sbx sbn}.include?(s)
       print "rm #{path}\n"
     end
   end
